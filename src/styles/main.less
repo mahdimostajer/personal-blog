@@ -1,0 +1,120 @@
+@import "~antd/lib/style/themes/default.less";
+@import "~antd/dist/antd.less";
+@import "./font.less";
+
+@font-family: iranyekan;
+@typography-title-margin-top: 0;
+@typography-title-margin-bottom: 0;
+
+@border-radius-content: 3rem 0 3rem 3rem;
+@border-radius-full: 3rem 3rem 3rem 3rem;
+@body-width: 1264px;
+@theme-text: #5f6f81;
+@padding-margin: 25px;
+
+.flex-center {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.content {
+  background-color: white;
+  border-radius: @border-radius-content;
+  margin: 0px;
+  min-height: 280px;
+}
+
+.outer-layout {
+  padding: 1.87rem;
+  @media screen and (max-width: 768px) {
+    padding: 0.6rem;
+  }
+}
+.inner-layout {
+  max-width: @body-width;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  max-width: @body-width;
+  flex-direction: row;
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 25px 40px;
+  }
+}
+
+.nav {
+  background-color: white;
+  border-radius: 0 3rem 0 0;
+  margin-left: auto;
+  position: relative;
+  font-weight: 500;
+  bottom: -0.2px;
+  &::after {
+    content: "";
+    background-image: url("../images/nav-edge.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 102.1%;
+    position: absolute;
+    top: 0;
+    left: -133px;
+    width: 135px;
+  }
+  &-item {
+    a {
+      color: @theme-text;
+      font-size: 16px;
+      padding: 10px 24px;
+      border-radius: 16px;
+    }
+  }
+}
+
+.sider {
+  padding: @padding-margin;
+  &-avatar {
+    background-image: url("../images/Keanu-Reeves.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: @border-radius-full;
+    height: 215px;
+  }
+  &-name {
+    margin: @padding-margin auto;
+  }
+  &-badge {
+    background-color: #eff2f7;
+    padding: 10px 15px;
+    border-radius: @border-radius-full;
+  }
+  &-info {
+    width: 100%;
+    margin: 35px 0;
+    padding: 0 @padding-margin;
+    &-list {
+      list-style: none;
+    }
+  }
+  &-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+}

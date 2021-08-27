@@ -19,7 +19,6 @@ module.exports = {
       options: {
         lessOptions: {
           javascriptEnabled: true,
-          modifyVars: lessToJson('src/theme/vars.less'),
         }
       }
     },
