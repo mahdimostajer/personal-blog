@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout } from "antd"
+import { Layout, Typography } from "antd"
 import Header from "./../../components/header"
 import Wrapper from "./../../components/layout"
 const Contact = () => {
@@ -8,7 +8,9 @@ const Contact = () => {
       <Layout className="inner-layout">
         <Header />
         <Wrapper>
-          <p>hi</p>
+          <div className="title-separate">
+            <Typography.Title level={2}>تماس</Typography.Title>
+          </div>
         </Wrapper>
       </Layout>
     </Layout>

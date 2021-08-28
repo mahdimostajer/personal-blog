@@ -1,26 +1,29 @@
-const lessToJson = require('less-to-json'); 
+const lessToJson = require("less-to-json")
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Ant Design Starter",
-    description: `Kick off your next, great Gatsby project with this extra awesome ant design starter!`,
-    author: `@gatsbyjs + @alienCY`,
+    title: "Personal Blog",
+    description: `Mahdi Mostajeran Personal Blog`,
+    author: `Mahdi Mostajeran`,
+    url: "https://www.doe.com", // No trailing slash allowed!
+    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@occlumency",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-antd',
+      resolve: "gatsby-plugin-antd",
       options: {
-        style: true
-      }
+        style: true,
+      },
     },
     {
       resolve: "gatsby-plugin-less",
       options: {
         lessOptions: {
           javascriptEnabled: true,
-        }
-      }
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

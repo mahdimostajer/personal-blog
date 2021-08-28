@@ -1,15 +1,19 @@
 import React from "react"
-import { Layout } from "antd"
+import { Layout, Typography } from "antd"
 import Header from "./../../components/header"
 import Wrapper from "./../../components/layout"
+import SEO from "../../components/seo"
 
 const Tags = () => {
   return (
     <Layout className="outer-layout">
       <Layout className="inner-layout">
+        <SEO />
         <Header />
         <Wrapper>
-          <p>tags</p>
+          <div className="title-separate">
+            <Typography.Title level={2}>تگ‌ها</Typography.Title>
+          </div>
         </Wrapper>
       </Layout>
     </Layout>

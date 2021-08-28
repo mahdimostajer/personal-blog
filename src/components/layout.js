@@ -1,7 +1,7 @@
 import React from "react"
-import { Affix, Col, Layout, Row, Space, Typography } from "antd"
+import { Affix, Col, Layout, Row, Typography } from "antd"
 import "../styles/main.less"
-import { CalendarOutlined, HomeOutlined, MailOutlined } from "@ant-design/icons"
+import { CalendarOutlined, HomeOutlined } from "@ant-design/icons"
 const Avatar = () => <div className="sider-avatar"></div>
 
 const Sider = () => (
@@ -35,7 +35,9 @@ const Wrapper = ({ children }) => {
     <Layout>
       <Layout.Content className="content">
         <Row>
-          <Col span={18}>{children}</Col>
+          <Col span={18}>
+            <Layout className="content-children">{children}</Layout>
+          </Col>
           <Col span={6}>
             <Affix>
               <Sider />

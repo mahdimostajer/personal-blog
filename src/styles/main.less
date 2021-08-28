@@ -33,6 +33,10 @@
   border-radius: @border-radius-content;
   margin: 0px;
   min-height: 280px;
+  &-children {
+    background-color: white;
+    padding: @padding-margin;
+  }
 }
 
 .outer-layout {
@@ -78,6 +82,7 @@
     width: 135px;
   }
   &-item {
+    margin-left: 15px;
     a {
       color: @theme-text;
       font-size: 16px;
@@ -116,5 +121,44 @@
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+  }
+}
+
+.about-card {
+  border: 2px solid #eff2f7;
+  border-radius: 10px;
+  &-image {
+    max-width: 64px;
+    margin: @padding-margin auto;
+  }
+  &-text {
+    h5 {
+      color: @theme-text;
+    }
+    h4 {
+      color: rgb(65, 65, 65);
+    }
+    margin-bottom: @padding-margin;
+  }
+}
+
+.title-separate {
+  margin-bottom: 40px;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    background-color: #304cfd;
+    border-radius: 0.5rem;
+    height: 5px;
+    position: absolute;
+    bottom: -1.1rem;
+    right: 0;
+    width: 3.12rem;
+    z-index: 1;
+  }
+  &::after {
+    background-color: #ff965d;
+    width: 1rem;
   }
 }
