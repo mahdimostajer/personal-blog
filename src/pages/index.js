@@ -25,16 +25,6 @@ const IndexPage = ({ data }) => (
                     alt={node.frontmatter.title}
                     className="post-cover"
                   />
-                  {/* <div
-                    style={{
-                      backgroundImage: `url(${
-                        node.frontmatter
-                          ? node.frontmatter.cover.childImageSharp.fluid.src
-                          : ""
-                      })`,
-                    }}
-                    className="post-cover"
-                  /> */}
                   <div className="post-info">
                     <Space direction="vertical" size={12}>
                       <div>
