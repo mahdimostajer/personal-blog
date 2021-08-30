@@ -1,19 +1,27 @@
 import React from "react"
-import { Layout, Typography } from "antd"
-import Header from "./../../components/header"
-import Wrapper from "./../../components/layout"
+import { Col, Row, Typography } from "antd"
+import { StaticImage } from "gatsby-plugin-image"
+import ContactForm from "./../../components/contactForm"
+
 const Contact = () => {
   return (
-    <Layout className="outer-layout">
-      <Layout className="inner-layout">
-        <Header />
-        <Wrapper>
-          <div className="title-separate">
-            <Typography.Title level={2}>تماس</Typography.Title>
-          </div>
-        </Wrapper>
-      </Layout>
-    </Layout>
+    <>
+      <div className="title-separate">
+        <Typography.Title level={2}>تماس</Typography.Title>
+      </div>
+      <Row>
+        <Col span={12}>
+          <ContactForm />
+        </Col>
+        <Col span={12}>
+          <StaticImage
+            src="../../images/form2.jpg"
+            alt="تماس با ما"
+            placeholder="blurred"
+          />
+        </Col>
+      </Row>
+    </>
   )
 }
 

@@ -1,13 +1,21 @@
 import React from "react"
-import { Affix, Col, Layout, Row, Typography } from "antd"
+import { Affix, Col, Layout, Row, Space, Typography } from "antd"
 import "../styles/main.less"
 import { CalendarOutlined, HomeOutlined } from "@ant-design/icons"
-const Avatar = () => <div className="sider-avatar"></div>
+import { StaticImage } from "gatsby-plugin-image"
+const Avatar = () => (
+  <StaticImage
+    src="../images/Keanu-Reeves.jpg"
+    alt="آواتار"
+    placeholder="blurred"
+    className="sider-avatar"
+  />
+)
 
 const Sider = () => (
   <aside className="sider text-center">
     <Avatar />
-    <div className="flex-center">
+    <Space direction="vertical" size={10}>
       <div className="sider-name">
         <Typography.Title level={3}>مهدی مستاجران</Typography.Title>
       </div>
@@ -26,7 +34,7 @@ const Sider = () => (
           </li>
         </ul>
       </div>
-    </div>
+    </Space>
   </aside>
 )
 
