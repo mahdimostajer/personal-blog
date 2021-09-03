@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => (
                       )}
                     </span>
                   </div>
-                  <Typography.Title level={4}>
+                  <Typography.Title level={4} type="secondary">
                     {node.frontmatter.title}
                   </Typography.Title>
                   <p className="post-excerpt">{node.frontmatter.excerpt}</p>

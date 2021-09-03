@@ -7,6 +7,7 @@
 @typography-title-margin-bottom: 0;
 @border-radius-base: 10px;
 @form-item-margin-bottom: 70px;
+@text-color-secondary: #284564;
 
 @border-radius-content: 3rem 0 3rem 3rem;
 @border-radius-full: 3rem 3rem 3rem 3rem;
@@ -178,10 +179,8 @@ body {
 .post-info {
   margin-top: 20px;
   padding: 3px;
-  h4 {
-    color: rgb(65, 65, 65);
-  }
 }
+
 .post-date {
   background-color: rgb(49, 84, 160);
   color: white;
@@ -192,6 +191,7 @@ body {
 
 .post-excerpt {
   color: @theme-text;
+  line-height: 1.7;
 }
 
 .post-tags {
@@ -199,4 +199,9 @@ body {
   word-spacing: 10px;
   direction: ltr;
   float: right;
+}
+
+.post-banner {
+  margin: 0 4rem;
+  border-radius: @border-radius-full;
 }
