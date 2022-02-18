@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     </div>
     <Row gutter={[20, 20]}>
       {data.allMdx.nodes.map(node => (
-        <Col span={8} key={node.id}>
+        <Col lg={8} md={12} sm={12} xs={24} key={node.id}>
           <Link to={`/${node.frontmatter.slug}`}>
             <article>
               <GatsbyImage

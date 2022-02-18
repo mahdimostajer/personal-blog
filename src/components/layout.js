@@ -3,6 +3,7 @@ import { Affix, Col, Layout, Row, Space, Typography } from "antd"
 import "../styles/main.less"
 import { CalendarOutlined, HomeOutlined } from "@ant-design/icons"
 import { StaticImage } from "gatsby-plugin-image"
+import { useLocation } from "@reach/router"
 const Avatar = () => (
   <StaticImage
     src="../images/Keanu-Reeves.jpg"
@@ -39,14 +40,21 @@ const Sider = () => (
 )
 
 const Wrapper = ({ children }) => {
+  const history = useLocation()
+  const isAboutPage = history.pathname === "/about"
   return (
     <Layout>
       <Layout.Content className="content">
         <Row>
-          <Col span={18}>
+          {isAboutPage && (
+            <Col sm={0} xs={24}>
+              <Sider />
+            </Col>
+          )}
+          <Col sm={18} xs={24}>
             <Layout className="content-children">{children}</Layout>
           </Col>
-          <Col span={6}>
+          <Col sm={6} xs={0}>
             <Affix>
               <Sider />
             </Affix>
