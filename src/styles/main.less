@@ -15,6 +15,12 @@
 @theme-text: #5f6f81;
 @padding-margin: 25px;
 
+.size-xs(@rules) {
+  @media only screen and (min-width: 576px) {
+    @rules();
+  }
+}
+
 body {
   background-color: #f0f2f5;
 }
@@ -76,6 +82,7 @@ body {
   border-radius: 0 3rem 0 0;
   margin-left: auto;
   position: relative;
+  list-style-type: none;
   font-weight: 500;
   bottom: -1px;
   &::after {
@@ -96,6 +103,31 @@ body {
       font-size: 16px;
       padding: 10px 24px;
       border-radius: 16px;
+    }
+  }
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 1px 3px 16px #a7a7a7;
+  z-index: 20;
+  &-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &-item {
+      margin-bottom: 30px;
+      a {
+        color: @theme-text;
+        font-size: 16px;
+        padding: 8px 20px;
+        border-radius: 10px;
+      }
     }
   }
 }
